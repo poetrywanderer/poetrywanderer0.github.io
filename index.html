@@ -1,1 +1,111 @@
-<p>Hello world</p>
+
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="tYhWuKpW7Yv5QweCswa0vRPfG3n2Z0jeCMm7FBYBuuI" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="alternate" href="../ja/" hreflang="ja">
+  <link rel="alternate" href="../" hreflang="x-default">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="keywords" content=
+  "pumarola, albert, deep learning, computer vision, computer graphics, machine learning, artificial intelligence, IRI">
+  <meta charset="UTF-8">
+  <meta name="author" content="Albert Pumarola">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0074D9">
+  <title>Albert Pumarola</title>
+  <link rel="stylesheet" type="text/css" href="../style.css" media="screen">
+</head>
+<script src="scripts/include_html.js"></script>
+<body>
+  <div id="page">
+    <div id="menubar">
+      
+      <h2><a href="#page" lang="en">Home</a></h2>
+      <h2><a href="#publications" lang="en">Publications</a></h2>
+      <h2><a href="#projects" lang="en">Projects</a></h2>
+    
+   </div>
+    <div id="main">
+      <div id="home">
+          
+        <div id="portrait">
+          <span id="portraitimage"><img src="../images/home_img.jpg" height="507" width="314"
+          alt="Albert Pumarola"></span>
+          <div>
+            <h1><span lang="en">Albert Pumarola</span></h1>
+            <h2><span lang="en">Computer Vision Researcher at Meta</span></h2>
+            <p class="med" lang="en">I am a Research Scientist at <a href="https://research.fb.com/category/computer-vision/">Meta</a>, working on efficient generative models and neural rendering. 
+              Prior to joining Meta, I received my PhD from the Barcelona Tech University in 2021. 
+              My thesis was on generative models and 3D reconstruction, advised by <a href="http://www.iri.upc.edu/people/fmoreno/">Francesc Moreno-Noguer</a> and <a href="http://www.iri.upc.edu/people/sanfeliu/">Alberto Sanfeliu</a>. <br><br>
+        
+              My research interests lie in computer vision, with a focus on generative models and neural rendering for photorealistic virtual human avatars and 3D reconstruction. <br><br>
+              
+<!--                 interned at <a href="https://ai.google/">Google AI</a>, <a href="https://research.fb.com/">Facebook Research</a> and <a href="https://www.ri.cmu.edu/">Carnegie Mellon University</a>.  <br>-->
+                
+                Receiver of the <a href="https://eccv2018.org/awards-2/">Best Paper Award Honorable Mention</a> ECCV'18.
+            </p>
+            <div class="list_buttons">
+                <a class="bibtexLink" href="mailto:apumarola@fb.com"><i class="fa fa-envelope"></i> Mail</a>
+                <a class="bibtexLink" href="https://scholar.google.es/citations?user=PtwauFAAAAAJ" target="_blank"><i class="fa fa-university"></i> Google Scholar</a>
+                <a class="bibtexLink" href="https://github.com/AlbertPumarola" target="_blank"><i class="fa fa-github"></i> Github</a>
+                <a class="bibtexLink" href="https://twitter.com/AlbertPumarola" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>   
+<!--                <a class="bibtexLink" href="https://www.youtube.com/channel/UCJc0nQuWazckll8yc6KYmuA" target="_blank"><i class="fa fa-youtube-play"></i>YouTube</a>         -->
+          </div>
+          </div>
+        </div>
+          
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <br><br>
+        <div id="publications">
+            <div w3-include-html="publications/publications.html"></div> 
+            <script> w3.includeHTML(); </script>
+        </div>
+        <br>
+        <div id="projects">
+            <div w3-include-html="projects/projects.html"></div> 
+            <script> w3.includeHTML(); </script>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+  <script>
+    window.jQuery || document.write('<script src="../jquery.js"><\/script>')
+  </script> 
+  <script type="text/javascript" src="../site.js"></script>
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-90616851-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+   $('ul#filter a').click(function() {
+      $(this).css('outline','none');
+      $('ul#filter .current').removeClass('current');
+      $(this).addClass('current');
+
+      //var filterVal = $(this).text().toLowerCase();
+      var filterVal = $(this).data('val');
+      $('.publications').fadeOut('fast', 'easeOutQuad', function() {
+         $('.publications >h3, .publications >ul.publist >li').each(function() {
+            $(this).fadeOut(0);
+            if (filterVal=='all' || $(this).hasClass(filterVal)) {
+               $(this).fadeIn('fast', 'easeOutQuad');
+            }
+         });
+         $(this).fadeIn(0);
+      });
+      return false;
+   });
+   $('a#all').click();
+  });
+  </script> 
+</body>
+</html>
+
